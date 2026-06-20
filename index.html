@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pig Synth</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #070708;
+      --surface: #0f0f11;
+      --border: rgba(255,255,255,0.055);
+      --text: #ececec;
+      --muted: rgba(255,255,255,0.5);
+      --accent: #59a6ff;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 24px;
+    }
+
+    .logo {
+      font-weight: 800;
+      font-size: 38px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text);
+      margin-bottom: 72px;
+    }
+
+    .logo span { color: var(--accent); }
+
+    .products {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      width: 100%;
+      max-width: 340px;
+    }
+
+    .product {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 24px 28px;
+      background: rgba(89,166,255,0.06);
+      border: 1px solid rgba(89,166,255,0.25);
+      border-radius: 10px;
+      text-decoration: none;
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .product:hover {
+      border-color: var(--accent);
+      background: rgba(89,166,255,0.10);
+    }
+
+    .product-name {
+      font-weight: 700;
+      font-size: 17px;
+      letter-spacing: 0.04em;
+      color: var(--text);
+    }
+
+    .product-desc {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 4px;
+      letter-spacing: 0.02em;
+    }
+
+    .product-arrow {
+      color: var(--accent);
+      font-size: 18px;
+    }
+
+    footer {
+      margin-top: 60px;
+      font-size: 11px;
+      color: var(--muted);
+      letter-spacing: 0.06em;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="logo">Pig<span>Synth</span></div>
+
+  <div class="products">
+    <a class="product" href="/kraftpad">
+      <div>
+        <div class="product-name">KraftPad</div>
+        <div class="product-desc">Trackpad MIDI controller for Mac</div>
+      </div>
+      <span class="product-arrow">→</span>
+    </a>
+  </div>
+
+</body>
+</html>
